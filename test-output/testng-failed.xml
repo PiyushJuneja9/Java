@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Chrome(failed)">
+    <parameter name="Browser" value="Chrome"/>
+    <classes>
+      <class name="tests.TransactionTest">
+        <methods>
+          <include name="Select_PaymentOpion"/>
+          <include name="order"/>
+          <include name="Continue_Button"/>
+          <include name="setup"/>
+          <include name="teatdown"/>
+        </methods>
+      </class> <!-- tests.TransactionTest -->
+      <class name="tests.HomePageTest">
+        <methods>
+          <include name="FlipkartTitle"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.HomePageTest -->
+    </classes>
+  </test> <!-- Chrome(failed) -->
+  <test thread-count="5" name="Firefox(failed)">
+    <parameter name="Browser" value="Fierfox"/>
+    <classes>
+      <class name="tests.AddBySearchTest">
+        <methods>
+          <include name="AddToCart"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.AddBySearchTest -->
+      <class name="tests.HomePageTest">
+        <methods>
+          <include name="FlipkartTitle"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.HomePageTest -->
+    </classes>
+  </test> <!-- Firefox(failed) -->
+  <test thread-count="5" name="Internet Explore(failed)">
+    <parameter name="Browser" value="IE"/>
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="set"/>
+          <include name="TeatDown"/>
+          <include name="Login_EmptyUsername"/>
+          <include name="login_ValidUserValidPass"/>
+          <include name="Login_EmptyPass"/>
+          <include name="Login_EmptyUser_pass"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.AddBySearchTest">
+        <methods>
+          <include name="AddToCart"/>
+          <include name="setup"/>
+          <include name="Select_Item"/>
+        </methods>
+      </class> <!-- tests.AddBySearchTest -->
+      <class name="tests.HomePageTest">
+        <methods>
+          <include name="FlipkartLoginBtn"/>
+          <include name="FlipkartTitle"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.HomePageTest -->
+      <class name="tests.AddToCompareTest">
+        <methods>
+          <include name="Dropdown"/>
+          <include name="setup"/>
+          <include name="Click_AddToCart"/>
+          <include name="Select_Filter"/>
+          <include name="Select_SubOption"/>
+          <include name="Select_ItemsToCompare"/>
+          <include name="OpenPage_CompareToOtherItems"/>
+        </methods>
+      </class> <!-- tests.AddToCompareTest -->
+    </classes>
+  </test> <!-- Internet Explore(failed) -->
+</suite> <!-- Failed suite [Suite] -->
